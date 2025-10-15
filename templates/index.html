@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional BMI Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <form method="POST">
+            <label for="height">Height (cm):</label>
+            <input type="number" name="height" step="0.1" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" name="weight" step="0.1" required>
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+
+        {% if bmi %}
+        <div class="result" style="background-color: {{ color }}">
+            <h2>{{ bmi }}</h2>
+            <p>Category: <strong>{{ category }}</strong></p>
+        </div>
+        {% endif %}
+
+        <div class="info">
+            <h3>BMI Categories</h3>
+            <ul>
+                <li><span style="color:#f4c542;">Underweight</span> &nbsp;→ BMI &lt; 18.5</li>
+                <li><span style="color:#4CAF50;">Normal</span> &nbsp;→ 18.5 ≤ BMI &lt; 24.9</li>
+                <li><span style="color:#ff9800;">Overweight</span> &nbsp;→ 25 ≤ BMI &lt; 29.9</li>
+                <li><span style="color:#f44336;">Obese</span> &nbsp;→ BMI ≥ 30</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
