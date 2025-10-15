@@ -1,10 +1,9 @@
-/* Import a modern font like Poppins (optional, but professional) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #3f51b5; /* A deep indigo blue for actions */
-    --secondary-color: #536dfe; /* A lighter accent */
-    --background-color: #f7f9fc; /* Very light grey/blue background */
+    --primary-color: #3f51b5;
+    --secondary-color: #536dfe;
+    --background-color: #f7f9fc; 
     --container-bg: #ffffff;
     --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     --border-radius: 12px;
@@ -59,7 +58,7 @@ input {
     border-radius: 8px;
     font-size: 16px;
     transition: border-color 0.3s;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box; 
 }
 
 input:focus {
@@ -83,7 +82,7 @@ button {
 }
 
 button:hover {
-    background-color: #30419d; /* Slightly darker primary color */
+    background-color: #30419d;
     box-shadow: 0 6px 15px rgba(63, 81, 181, 0.4);
 }
 
@@ -141,13 +140,11 @@ button:hover {
     font-weight: 600;
 }
 
-/* Subtle fade animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 📱 Responsive adjustments */
 @media (max-width: 480px) {
     .container {
         padding: 25px;
